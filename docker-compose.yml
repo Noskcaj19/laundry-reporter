@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  laundry-system:
+    build: .
+    restart: always
+    ports:
+      - "8091:8000"
+    environment:
+      - DRYER_WEBHOOK=${DRYER_WEBHOOK}
+      - WASHER_WEBHOOK=${WASHER_WEBHOOK}
